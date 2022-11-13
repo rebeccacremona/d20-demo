@@ -1,0 +1,277 @@
+/**/
+/* Fonts
+/* from https://github.com/naturalcrit/homebrewery/blob/master/themes/fonts/5e/fonts.less */
+/**/
+
+/* Main Font, serif */
+@font-face {
+	font-family: BookInsanityRemake;
+	src: url('fonts/Bookinsanity.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: BookInsanityRemake;
+	src: url('fonts/Bookinsanity Bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: BookInsanityRemake;
+	src: url('fonts/Bookinsanity Italic.woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: BookInsanityRemake;
+	src: url('fonts/Bookinsanity Bold Italic.woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Notes and Tables, sans-serif */
+@font-face {
+	font-family: ScalySansRemake;
+	src: url('fonts/Scaly Sans.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: ScalySansRemake;
+	src: url('fonts/Scaly Sans Bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: ScalySansRemake;
+	src: url('fonts/Scaly Sans Italic.woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: ScalySansRemake;
+	src: url('fonts/Scaly Sans Bold Italic.woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: ScalySansSmallCapsRemake;
+	src: url('fonts/Scaly Sans Caps.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: WalterTurncoat;
+	src: url('fonts/WalterTurncoat-Regular.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Headers */
+@font-face {
+	font-family: MrEavesRemake;
+	src: url('fonts/Mr Eaves Small Caps.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Fancy Drop Cap */
+@font-face {
+	font-family: SolberaImitationRemake; //Tweaked 5e version
+	src: url('fonts/Solbera Imitation Tweak.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Cover Page */
+@font-face {
+	font-family: NodestoCapsCondensed;
+	src: url('fonts/Nodesto Caps Condensed.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: NodestoCapsCondensed;
+	src: url('fonts/Nodesto Caps Condensed Bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: NodestoCapsCondensed;
+	src: url('fonts/Nodesto Caps Condensed Italic.woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: NodestoCapsCondensed;
+	src: url('fonts/Nodesto Caps Condensed Bold Italic.woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/**/
+/* Colors */
+/**/
+
+:root {
+  --cream: rgba(253, 254, 246);
+  --cream-transparent: rgba(253, 254, 246, 0.85);
+  --black-transparent: rgba(1, 1, 1, 0.55);
+  --purple1: #892f8b;
+  --purple2: #752576;
+  --purple3: #511952;
+  --gold: gold;
+  --gold-lighter: cornsilk;
+  --HB_Color_Background: #EEE5CE;
+}
+
+/**/
+/* Custom */
+/**/
+
+/* Background image */
+
+html, body  {
+  height: 100%;
+  width: 100%;
+  margin:  0;
+  padding: 0;
+  
+}
+
+html {
+  background-image: url('./images/tree.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Navbar */
+
+.nav-container {
+  width: 100%;
+  background: var(--black-transparent);
+}
+
+nav {
+  max-width: 1720px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  font-family: MrEavesRemake;
+  font-weight:  800;
+}
+
+.decoration {
+	grid-column: 2;
+}
+
+.wordmark {
+  grid-column: 1;
+
+  padding: 15px 0;
+  line-height:  38px;
+  margin-left:  30px;
+
+  font-family: MrEavesRemake;
+  font-weight: 900;
+  font-size: 1.75rem;  
+}
+
+.wordmark span {
+	color: var(--gold);
+}
+
+.wordmark a, .menu a {
+	color: var(--cream);
+	text-decoration: none;
+}
+
+.menu {
+  grid-column: 3;
+  
+	padding: 15px 0;	
+	line-height:  38px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.menu a {
+  margin-right: 15px;
+
+  /* Hover/focus isn't working with this font... hmmmm */
+  /*font-family: ScalySansSmallCapsRemake;*/
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.menu a:hover, .menu a:focus-visible  {
+  animation: glow 1s ease-out;
+  animation-fill-mode: forwards;
+  outline:  0;
+}
+
+.menu a:focus-visible {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+
+.menu a.current {
+  color: var(--gold);
+}
+
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 5px black, 0 0 10px var(--gold-lighter), 0 0 15px var(--gold-lighter), 0 0 20px var(--gold-lighter), 0 0 25px var(--gold-lighter), 0 0 30px var(--gold-lighter), 0 0 35px var(--gold-lighter);
+  }
+}
+
+.dropdown, .burger-menu {
+  display: none;
+}
+
+.dropdown button {
+	background: none;
+	border: none;
+}
+
+@media only screen and (max-width: 1025px) {
+  .dropdown {
+    grid-column: 3;
+    display: block;
+    text-align: right;
+    padding: 5px 0;
+    margin-right: 25px;
+  }
+
+  .dropdown img {
+  	filter: drop-shadow(0 0 15px var(--gold));
+  }
+
+  .dropdown button:hover img, .dropdown button:focus-visible img {
+		filter: drop-shadow(0 0 15px var(--gold)) drop-shadow(0 0 30px var(--cream));
+  }
+
+  .menu {
+    display: none;
+  }
+
+  #nav-toggle:checked ~ .menu {
+    display: grid;
+    grid-row: 3;
+  }
+}   
+
+
+@media only screen and (max-width: 500px) {
+	.wordmark {
+		font-size: 1.3rem;
+	}
+}
