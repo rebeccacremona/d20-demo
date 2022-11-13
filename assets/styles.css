@@ -212,7 +212,7 @@ nav {
 }
 
 .menu a:hover, .menu a:focus-visible  {
-  animation: glow 1s ease-out;
+  animation: glow 0.5s ease;
   animation-fill-mode: forwards;
   outline:  0;
 }
@@ -247,8 +247,8 @@ nav {
     grid-column: 3;
     display: block;
     text-align: right;
-    padding: 5px 0;
-    margin-right: 25px;
+		padding: 15px 0 0 0;
+		margin-right: 35px;
   }
 
   .dropdown img {
@@ -260,12 +260,11 @@ nav {
   }
 
   .menu {
-    display: none;
-  }
-
-  #nav-toggle:checked ~ .menu {
     display: grid;
     grid-row: 3;
+    padding-top: 0;
+    margin-right: 25px;
+
   }
 }   
 
@@ -273,5 +272,11 @@ nav {
 @media only screen and (max-width: 500px) {
 	.wordmark {
 		font-size: 1.3rem;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.wordmark {
+		font-size: 1rem;
 	}
 }
