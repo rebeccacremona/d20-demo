@@ -325,7 +325,7 @@ main {
   background-position: bottom left, top left, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: contain, contain, cover;
-  background-origin: content-box, content-box, padding-box;
+  background-origin: padding-box, content-box, padding-box;
   padding: 15px 30px 10px;
 }
 
@@ -333,6 +333,8 @@ main {
   main {
     /* this pixel value is the height of the mobile nav, closed  */
     min-height: calc(100% - 76px);
+    /* the bottom decoration looks a bit nicer higher */
+    background-origin: content-box, content-box, padding-box;
   }
 }
 
