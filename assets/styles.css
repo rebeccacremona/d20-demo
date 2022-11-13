@@ -317,16 +317,16 @@ main {
 }
 
 main {
-	/* this pixel value is the height of the desktop nav, closed  */
-	min-height: calc(100% - 68px);
-	
-	opacity: 0.85;
-	background-image: url(./images/PHB_footerAccent.png), url(./images/parchmentBackground.jpg);
-	background-position: top left, center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-origin: content-box, padding-box;
-  padding: 15px 30px;
+  /* this pixel value is the height of the desktop nav, closed  */
+  min-height: calc(100% - 68px);
+  
+  opacity: 0.85;
+  background-image: url(./images/PHB_footerAccent.png), url(./images/PHB_footerAccent.png), url(./images/parchmentBackground.jpg);
+  background-position: bottom left, top left, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, cover;
+  background-origin: content-box, content-box, padding-box;
+  padding: 15px 30px 10px;
 }
 
 @media only screen and (max-width: 1025px) {
