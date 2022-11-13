@@ -264,12 +264,16 @@ nav {
   	display: none;
   }
 
+  .menu a {
+  	padding: 10px 0;
+  }
+
   .nav-open .menu {
     display: grid;
     grid-row: 3;
     padding-top: 0;
     margin-right: 25px;
-
+    margin-bottom: 10px;
   }
 }   
 
@@ -327,12 +331,12 @@ main {
 
 @media only screen and (max-width: 1025px) {
 	main {
-		/* this pixel value is the height of the mobile nav, open  */
+		/* this pixel value is the height of the mobile nav, closed  */
 		min-height: calc(100% - 76px);
 	}
 }
 
 .nav-open main {
 	/* this pixel value is the height of the mobile nav, open  */
-	min-height: calc(100% - 205px);
+	min-height: calc(100% - 275px);
 }
