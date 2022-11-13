@@ -149,8 +149,9 @@ html {
   background-size: cover;
 }
 
-
+/**/
 /* Navbar */
+/**/
 
 .nav-container {
   width: 100%;
@@ -263,7 +264,7 @@ nav {
   	display: none;
   }
 
-  .menu.open {
+  .nav-open .menu {
     display: grid;
     grid-row: 3;
     padding-top: 0;
@@ -271,7 +272,6 @@ nav {
 
   }
 }   
-
 
 @media only screen and (max-width: 500px) {
 	.wordmark {
@@ -283,4 +283,56 @@ nav {
 	.wordmark {
 		font-size: 1rem;
 	}
+}
+
+/**/
+/* Main Content  */
+/**/
+
+/* .container from Skeleton */
+/* http://getskeleton.com/ */
+main {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; 
+
+}
+@media (min-width: 500px) {
+  main {
+    width: 85%;
+    padding: 0; 
+  }
+}
+@media (min-width: 650px) {
+  main {
+    width: 80%; 
+  }
+}
+
+main {
+	/* this pixel value is the height of the desktop nav, closed  */
+	min-height: calc(100% - 68px);
+	
+	opacity: 0.85;
+	background-image: url(./images/PHB_footerAccent.png), url(./images/parchmentBackground.jpg);
+	background-position: top left, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
+  background-origin: content-box, padding-box;
+  padding: 15px 30px;
+}
+
+@media only screen and (max-width: 1025px) {
+	main {
+		/* this pixel value is the height of the mobile nav, open  */
+		min-height: calc(100% - 76px);
+	}
+}
+
+.nav-open main {
+	/* this pixel value is the height of the mobile nav, open  */
+	min-height: calc(100% - 205px);
 }
