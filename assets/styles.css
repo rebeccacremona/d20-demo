@@ -253,7 +253,7 @@ nav {
   }
 
   .dropdown img {
-    filter: drop-shadow(0 0 15px var(--gold));
+    filter: drop-shadow(0 0 7px var(--gold)) drop-shadow(0 0 7px var(--purple2));
   }
 
   .dropdown button:hover img, .dropdown button:focus-visible img {
