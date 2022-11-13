@@ -1,0 +1,12 @@
+{% capture title %}
+  {% if page.title-tag-complete %}
+    {{ page.title-tag-complete }}
+  {% elsif page.title-tag %}
+    {{ page.title-tag | append: " | D20 Development" }}
+  {% elsif page.title %}
+    {{ page.title | append: " | D20 Development" }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+{% endcapture %}
+<title>{{ title | strip }}</title>

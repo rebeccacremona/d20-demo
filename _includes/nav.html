@@ -1,0 +1,17 @@
+<div class="nav-container">
+  <nav>
+    <div class="wordmark">
+      <a href="{{ site.baseurl }}{% link index.markdown %}"><span>D20</span> development</a>
+    </div>
+    <div class="dropdown">
+      <button id="toggle-nav" aria-label="show menu" type="button" aria-controls="menu" aria-haspopup="true" aria-expanded="false">
+        <img src="{{ 'assets/images/die.png' | relative_url }}" height=55 width=50 alt="">
+      </button>
+    </div>
+    <div id="menu" class="menu">
+      <a {% if page.title == 'About' %}aria-current='page'{% endif %} href="{{ site.baseurl }}{% link about.markdown %}">About</a>
+      <a {% if page.title == 'Services' %}aria-current='page'{% endif %} href="{{ site.baseurl }}{% link services.markdown %}">Services</a>
+      <a {% if page.title == 'Contact' %}aria-current='page'{% endif %} href="{{ site.baseurl }}{% link contact.markdown %}">Contact</a>
+    </div>
+  </nav>
+</div>

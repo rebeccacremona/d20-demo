@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include title.html %}
+  {% include description.html %}
+  {% include sharing-image.html %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/favicon-die.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/styles.css' | relative_url  | append: '?cache-buster=1' }}">
+  <script type="module" src="{{ '/assets/nav.js' | relative_url | append: '?cache-buster=1' }}"></script>
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    <img src="{{ 'assets/images/dragon.png' | relative_url }}" height=70 width=70 alt="">
+    <div class="content">
+      {{ content }}
+    </div>
+  </main>
+</body>
+</html>

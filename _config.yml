@@ -1,0 +1,44 @@
+title: D20 Development
+email: chris@d20development.com
+description: >
+  Professional Team Development in the 21st Century
+baseurl: "/d20-demo"
+url: "https://rebeccacremona.github.io"
+domain: "rebeccacremona.github.io"
+
+# Social media
+# NB: Twitter account name is used in sharing-image.html
+twitter_username: rebeccacremona
+# facebook_username: jekyllrb
+# github_username:  jekyll
+sharing-image: "images/sharing-image-590x492.png"
+
+# Build settings
+plugins:
+  - jekyll-feed
+permalink: pretty
+markdown: kramdown
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      sharing-card-type: "summary_large_image"
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.markdown

@@ -223,7 +223,7 @@ nav {
   text-decoration-thickness: 2px;
 }
 
-.menu a.current {
+.menu a[aria-current='page'] {
   color: var(--gold);
 }
 
@@ -244,11 +244,21 @@ nav {
 }
 
 @media only screen and (max-width: 1025px) {
+  .nav-container {
+    padding-top: 5px;
+  }
+
+  .wordmark {
+    /* This is the height of the rendered die.png */
+    line-height: 55px;
+  }
+
   .dropdown {
     grid-column: 3;
     display: block;
     text-align: right;
     padding: 15px 0 0 0;
+    margin-bottom: 15px;
     margin-right: 35px;
   }
 
@@ -332,7 +342,7 @@ main {
 @media only screen and (max-width: 1025px) {
   main {
     /* this pixel value is the height of the mobile nav, closed  */
-    min-height: calc(100% - 76px);
+    min-height: calc(100% - 96px);
     /* the bottom decoration looks a bit nicer higher */
     background-origin: content-box, content-box, padding-box;
   }
@@ -340,7 +350,7 @@ main {
 
 .nav-open main {
   /* this pixel value is the height of the mobile nav, open  */
-  min-height: calc(100% - 275px);
+  min-height: calc(100% - 296px);
 }
 
 /*main h1, main h2, main h3, main h4, main h5, main h6 {

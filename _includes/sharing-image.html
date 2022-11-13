@@ -1,0 +1,43 @@
+{% capture sharing-image %}
+  {% if page.sharing-image %}
+    {{ page.sharing-image }}
+  {% else %}
+    {{ site.sharing-image }}
+  {% endif %}
+{% endcapture %}
+
+{% capture sharing-description %}
+  {% if page.sharing-description %}
+    {{ page.sharing-description }}
+  {% elsif page.description %}
+    {{ page.description }}
+  {% elsif page.excerpt %}
+    {{ page.excerpt | strip_html | strip_newlines | escape_once | truncate: 160 }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+
+{% capture sharing-title %}
+  {% if page.title-tag-complete %}
+    {{ page.title-tag-complete }}
+  {% elsif page.title-tag %}
+    {{ page.title-tag | append: " | D20 Development" }}
+  {% elsif page.title %}
+    {{ page.title | append: " | D20 Development" }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+{% endcapture %}
+
+<meta name="twitter:card" content="{{ page.sharing-card-type }}">
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+<meta name="twitter:title" content="{{ sharing-title | strip | escape_once }}">
+<meta name="twitter:description" content="{{ sharing-description | strip | escape_once }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/{{ sharing-image | strip }}?cache-buster=1">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}">
+<meta property="og:title" content="{{ sharing-title | strip | escape_once }}">
+<meta property="og:description" content="{{ sharing-description | strip | escape_once }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/{{ sharing-image | strip }}?cache-buster=1">
