@@ -12,13 +12,13 @@
     <div class="wordmark">
       <a href="#"><span>D20</span> development</a>
     </div>
-    <div class="menu">
+    <div id="menu" class="menu">
       <a class="current" href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
     </div>
     <div class="dropdown">
-      <button>
+      <button aria-label="menu" type="button" onclick="document.getElementById('menu').classList.toggle('open');">
         <img src="assets/images/die.png" height=55 width=50 alt="">
       </button>
     </div>

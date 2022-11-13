@@ -233,7 +233,7 @@ nav {
   }
 }
 
-.dropdown, .burger-menu {
+.dropdown {
   display: none;
 }
 
@@ -260,6 +260,10 @@ nav {
   }
 
   .menu {
+  	display: none;
+  }
+
+  .menu.open {
     display: grid;
     grid-row: 3;
     padding-top: 0;
