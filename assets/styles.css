@@ -5,111 +5,111 @@
 
 /* Main Font, serif */
 @font-face {
-	font-family: BookInsanityRemake;
-	src: url('fonts/Bookinsanity.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: BookInsanityRemake;
+  src: url('fonts/Bookinsanity.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: BookInsanityRemake;
-	src: url('fonts/Bookinsanity Bold.woff2');
-	font-weight: bold;
-	font-style: normal;
+  font-family: BookInsanityRemake;
+  src: url('fonts/Bookinsanity Bold.woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-	font-family: BookInsanityRemake;
-	src: url('fonts/Bookinsanity Italic.woff2');
-	font-weight: normal;
-	font-style: italic;
+  font-family: BookInsanityRemake;
+  src: url('fonts/Bookinsanity Italic.woff2');
+  font-weight: normal;
+  font-style: italic;
 }
 @font-face {
-	font-family: BookInsanityRemake;
-	src: url('fonts/Bookinsanity Bold Italic.woff2');
-	font-weight: bold;
-	font-style: italic;
+  font-family: BookInsanityRemake;
+  src: url('fonts/Bookinsanity Bold Italic.woff2');
+  font-weight: bold;
+  font-style: italic;
 }
 
 /* Notes and Tables, sans-serif */
 @font-face {
-	font-family: ScalySansRemake;
-	src: url('fonts/Scaly Sans.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: ScalySansRemake;
+  src: url('fonts/Scaly Sans.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: ScalySansRemake;
-	src: url('fonts/Scaly Sans Bold.woff2');
-	font-weight: bold;
-	font-style: normal;
+  font-family: ScalySansRemake;
+  src: url('fonts/Scaly Sans Bold.woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-	font-family: ScalySansRemake;
-	src: url('fonts/Scaly Sans Italic.woff2');
-	font-weight: normal;
-	font-style: italic;
+  font-family: ScalySansRemake;
+  src: url('fonts/Scaly Sans Italic.woff2');
+  font-weight: normal;
+  font-style: italic;
 }
 @font-face {
-	font-family: ScalySansRemake;
-	src: url('fonts/Scaly Sans Bold Italic.woff2');
-	font-weight: bold;
-	font-style: italic;
+  font-family: ScalySansRemake;
+  src: url('fonts/Scaly Sans Bold Italic.woff2');
+  font-weight: bold;
+  font-style: italic;
 }
 @font-face {
-	font-family: ScalySansSmallCapsRemake;
-	src: url('fonts/Scaly Sans Caps.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: ScalySansSmallCapsRemake;
+  src: url('fonts/Scaly Sans Caps.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: WalterTurncoat;
-	src: url('fonts/WalterTurncoat-Regular.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: WalterTurncoat;
+  src: url('fonts/WalterTurncoat-Regular.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Headers */
 @font-face {
-	font-family: MrEavesRemake;
-	src: url('fonts/Mr Eaves Small Caps.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: MrEavesRemake;
+  src: url('fonts/Mr Eaves Small Caps.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Fancy Drop Cap */
 @font-face {
-	font-family: SolberaImitationRemake; //Tweaked 5e version
-	src: url('fonts/Solbera Imitation Tweak.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: SolberaImitationRemake; //Tweaked 5e version
+  src: url('fonts/Solbera Imitation Tweak.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Cover Page */
 @font-face {
-	font-family: NodestoCapsCondensed;
-	src: url('fonts/Nodesto Caps Condensed.woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: NodestoCapsCondensed;
+  src: url('fonts/Nodesto Caps Condensed.woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: NodestoCapsCondensed;
-	src: url('fonts/Nodesto Caps Condensed Bold.woff2');
-	font-weight: bold;
-	font-style: normal;
+  font-family: NodestoCapsCondensed;
+  src: url('fonts/Nodesto Caps Condensed Bold.woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: NodestoCapsCondensed;
-	src: url('fonts/Nodesto Caps Condensed Italic.woff2');
-	font-weight: normal;
-	font-style: italic;
+  font-family: NodestoCapsCondensed;
+  src: url('fonts/Nodesto Caps Condensed Italic.woff2');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-	font-family: NodestoCapsCondensed;
-	src: url('fonts/Nodesto Caps Condensed Bold Italic.woff2');
-	font-weight: bold;
-	font-style: italic;
+  font-family: NodestoCapsCondensed;
+  src: url('fonts/Nodesto Caps Condensed Bold Italic.woff2');
+  font-weight: bold;
+  font-style: italic;
 }
 
 /**/
@@ -170,7 +170,7 @@ nav {
 }
 
 .decoration {
-	grid-column: 2;
+  grid-column: 2;
 }
 
 .wordmark {
@@ -186,19 +186,19 @@ nav {
 }
 
 .wordmark span {
-	color: var(--gold);
+  color: var(--gold);
 }
 
 .wordmark a, .menu a {
-	color: var(--cream);
-	text-decoration: none;
+  color: var(--cream);
+  text-decoration: none;
 }
 
 .menu {
   grid-column: 3;
   
-	padding: 15px 0;	
-	line-height:  38px;
+  padding: 15px 0;  
+  line-height:  38px;
   text-align: right;
   margin-right: 30px;
 }
@@ -219,8 +219,8 @@ nav {
 }
 
 .menu a:focus-visible {
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .menu a.current {
@@ -239,8 +239,8 @@ nav {
 }
 
 .dropdown button {
-	background: none;
-	border: none;
+  background: none;
+  border: none;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -248,24 +248,24 @@ nav {
     grid-column: 3;
     display: block;
     text-align: right;
-		padding: 15px 0 0 0;
-		margin-right: 35px;
+    padding: 15px 0 0 0;
+    margin-right: 35px;
   }
 
   .dropdown img {
-  	filter: drop-shadow(0 0 15px var(--gold));
+    filter: drop-shadow(0 0 15px var(--gold));
   }
 
   .dropdown button:hover img, .dropdown button:focus-visible img {
-		filter: drop-shadow(0 0 15px var(--gold)) drop-shadow(0 0 30px var(--cream));
+    filter: drop-shadow(0 0 15px var(--gold)) drop-shadow(0 0 30px var(--cream));
   }
 
   .menu {
-  	display: none;
+    display: none;
   }
 
   .menu a {
-  	padding: 10px 0;
+    padding: 10px 0;
   }
 
   .nav-open .menu {
@@ -278,15 +278,15 @@ nav {
 }   
 
 @media only screen and (max-width: 500px) {
-	.wordmark {
-		font-size: 1.3rem;
-	}
+  .wordmark {
+    font-size: 1.3rem;
+  }
 }
 
 @media only screen and (max-width: 375px) {
-	.wordmark {
-		font-size: 1rem;
-	}
+  .wordmark {
+    font-size: 1rem;
+  }
 }
 
 /**/
@@ -330,13 +330,30 @@ main {
 }
 
 @media only screen and (max-width: 1025px) {
-	main {
-		/* this pixel value is the height of the mobile nav, closed  */
-		min-height: calc(100% - 76px);
-	}
+  main {
+    /* this pixel value is the height of the mobile nav, closed  */
+    min-height: calc(100% - 76px);
+  }
 }
 
 .nav-open main {
-	/* this pixel value is the height of the mobile nav, open  */
-	min-height: calc(100% - 275px);
+  /* this pixel value is the height of the mobile nav, open  */
+  min-height: calc(100% - 275px);
 }
+
+/*main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-family: MrEavesRemake;
+}
+
+header {
+  padding: 25px 15px 0;
+}
+
+.subtitle {
+  font-family: ScalySansSmallCapsRemake;
+}
+
+.content {
+  font-family: BookInsanityRemake;
+  padding: 0 15px;
+}*/
