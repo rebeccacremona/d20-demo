@@ -343,6 +343,8 @@ main {
   
   padding: 45px 30px 15px;
 
+  font-size: 0.8rem;
+
 }
 @media (min-width: 500px) {
   main {
@@ -379,7 +381,7 @@ main {
   box-sizing: border-box;
   padding: 15px 35px 0;
   font-family: BookInsanityRemake;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -410,6 +412,8 @@ main h1 {
   vertical-align: top;
   margin-left: 8px;
   padding-top: 8px;
+
+  font-size: 24px;
 }
 
 main h2 {
@@ -431,6 +435,10 @@ main h2 {
 
 @media only screen and (min-width: 1026px) {
   
+  main h1 {
+    font-size: 36px;
+  }  
+
   /* Drop cap first element  */
   .content p:first-child::first-letter {
     float: left;
