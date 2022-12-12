@@ -126,6 +126,14 @@
   --gold: gold;
   --gold-lighter: cornsilk;
   --HB_Color_Background: #EEE5CE;
+  --HB_Color_Accent: #E0E5C1;
+  --HB_Color_HeaderUnderline: #C0AD6A;
+  --HB_Color_HorizontalRule: #9C2B1B;
+  --HB_Color_HeaderText: #58180D;
+  --HB_Color_MonsterStatBackground: #F2E5B5;
+  --HB_Color_CaptionText: #766649;
+  --HB_Color_WatercolorStain: #BBAD82;
+  --HB_Color_Footnotes: #C9AD6A;
 }
 
 /**/
@@ -310,14 +318,35 @@ main {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box; 
+
+  /* this pixel value is the height of the mobile nav, closed  */
+  height: calc(100% - 96px);
+  position: relative;
+  
+  opacity: 0.85;
+  background-color: var(--HB_Color_Background);
+  
+  /* Just the top decoration */
+  background-image: url(./images/PHB_footerAccent.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+
+  /* Top and bottom decoration */
+  /*background-image: url(./images/PHB_footerAccent.png), url(./images/PHB_footerAccent.png);*/
+  /*background-position: bottom left, top left;*/
+  /*background-repeat: no-repeat, no-repeat;*/
+  /*background-size: contain, contain;*/
+  /*background-origin: content-box, content-box*/
+  
+  padding: 45px 30px 15px;
 
 }
 @media (min-width: 500px) {
   main {
     width: 85%;
-    padding: 0; 
   }
 }
 @media (min-width: 650px) {
@@ -325,47 +354,103 @@ main {
     width: 80%; 
   }
 }
-
-main {
-  /* this pixel value is the height of the desktop nav, closed  */
-  min-height: calc(100% - 68px);
-  
-  opacity: 0.85;
-  background-image: url(./images/PHB_footerAccent.png), url(./images/PHB_footerAccent.png), url(./images/parchmentBackground.jpg);
-  background-position: bottom left, top left, center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: contain, contain, cover;
-  background-origin: padding-box, content-box, padding-box;
-  padding: 15px 30px 10px;
-}
-
-@media only screen and (max-width: 1025px) {
+@media (min-width: 1026px) {
   main {
-    /* this pixel value is the height of the mobile nav, closed  */
-    min-height: calc(100% - 96px);
-    /* the bottom decoration looks a bit nicer higher */
-    background-origin: content-box, content-box, padding-box;
+    /* this pixel value is the height of the desktop nav, closed  */
+    height: calc(100% - 68px);
+    padding-top: 25px;
+    /*background-origin: padding-box, content-box;*/
   }
 }
 
 .nav-open main {
   /* this pixel value is the height of the mobile nav, open  */
-  min-height: calc(100% - 296px);
+  height: calc(100% - 296px);
 }
 
-/*main h1, main h2, main h3, main h4, main h5, main h6 {
-  font-family: MrEavesRemake;
-}
-
-header {
-  padding: 25px 15px 0;
-}
-
-.subtitle {
-  font-family: ScalySansSmallCapsRemake;
+.content-wrapper {
+  height: calc(100% - 68px - 15px);
+  position: relative
 }
 
 .content {
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 15px 35px 0;
   font-family: BookInsanityRemake;
-  padding: 0 15px;
-}*/
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1025px) {
+  .content {
+    padding: 15px 0 0;
+  }
+}
+
+.content:before {
+  content:'';
+  width:100%;
+  height:100%;    
+  position:absolute;
+  left:0;
+  top:0;
+  background:linear-gradient(var(--HB_Color_Background), transparent 55px, transparent);
+  pointer-events: none
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-family: MrEavesRemake;
+  color:  var(--HB_Color_HeaderText)
+}
+
+main h1 {
+  display: inline-block;
+  border-bottom: none;
+  vertical-align: top;
+  margin-left: 8px;
+  padding-top: 8px;
+}
+
+main h2 {
+  border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+}
+
+.content p {
+  line-height: 1.7;
+}
+
+.content p:first-child {
+  display: inline-block;
+  margin: auto;
+  margin-top: 18px;
+  font-style: italic;
+  font-size:  1.25rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1026px) {
+  
+  /* Drop cap first element  */
+  .content p:first-child::first-letter {
+    float: left;
+    font-family: SolberaImitationRemake;
+    font-style: normal;
+    line-height: 1em;
+    font-size: 132px;
+    padding-left: 40px;
+    margin-left: -40px;
+    margin-top: -12px;
+    padding-bottom: 2px;
+    margin-bottom: -20px;
+    background-image: linear-gradient(-45deg, #322814, #998250, #322814);
+    background-clip: text;
+    color: rgba(0,0,0,0);
+  }
+
+  .content p:first-child {
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+}
