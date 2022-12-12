@@ -6,9 +6,15 @@
   {% include title.html %}
   {% include description.html %}
   {% include sharing-image.html %}
+  
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}">
-  <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/favicon-die.png' | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/favicon-dragon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/images/tree.jpeg' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/images/dragon.png' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/images/PHB_footerAccent.png' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/assets/images/die.png' | relative_url }}">
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/Mr Eaves Small Caps.woff2' | relative_url }}">
   <link rel="stylesheet" type="text/css" href="{{ '/assets/styles.css' | relative_url  | append: '?cache-buster=1' }}">
   <script type="module" src="{{ '/assets/nav.js' | relative_url | append: '?cache-buster=1' }}"></script>
 </head>
@@ -16,8 +22,11 @@
   {% include nav.html %}
   <main>
     <img src="{{ 'assets/images/dragon.png' | relative_url }}" height=70 width=70 alt="">
-    <div class="content">
-      {{ content }}
+    <h1>{{ page.title }}</h1>
+    <div class="content-wrapper">
+      <div class="content">
+        {{ content }}
+      </div>
     </div>
   </main>
 </body>
